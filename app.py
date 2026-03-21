@@ -1,7 +1,6 @@
 import os
 import cv2
 import sys
-sys.path.append(r"C:\Users\Admin\Desktop\simple\yolov5")
 import torch
 import time
 import sqlite3
@@ -19,26 +18,26 @@ import torch.backends.cudnn as cudnn
 
 # ================= CONFIG =================
 
-WEIGHTS = r"C:\Users\Admin\Desktop\live-head-count\crowdhuman_yolov5m.pt"
+WEIGHTS = "crowdhuman_yolov5m.pt"
 
 # RTSP CAMERA (Production)
 #VIDEO_SOURCE = "rtsp://username:password@camera_ip:554/stream"
 
 CAMERAS = {
     1: {
-        "source": r"C:\Users\Admin\Desktop\live-head-count\CCTV_Crowd_Entrance_Video_Generation.mp4",
+        "source": "video1.mp4",
         "entry_line": 500
     },
     2: {
-        "source": r"C:\Users\Admin\Desktop\live-head-count\Realistic_Crowd_Surveillance_Video_Generation.mp4",
+        "source": "video2.mp4",
         "entry_line": 450
     },
     3: {
-        "source": r"C:\Users\Admin\Desktop\live-head-count\crowd-2.mp4",
+        "source": "video3.mp4",
         "entry_line": 450
     },
     4: {
-        "source": r"C:\Users\Admin\Desktop\live-head-count\Realistic_CCTV_School_Entrance_Video (1).mp4",
+        "source": "video4.mp4",
         "entry_line": 400
     },
 }

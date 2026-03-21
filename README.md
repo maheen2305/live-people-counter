@@ -1,13 +1,9 @@
 # Live People Counter – Real-Time Head Detection & Tracking
 
-A real-time **head-based people counting system** using **YOLOv5** for detection and **DeepSORT / IoU tracking** for stable ID assignment.  
-Designed for CCTV and live monitoring to measure **how many people are present** in the camera frame at any moment.
+A real-time **head-based people counting system** using **YOLOv5** for detection and **DeepSORT / IoU tracking** for stable identity tracking.  
+Designed for CCTV and live monitoring to measure **how many people are present** in a scene and supports entry-counting based on line crossing.
 
-This project provides two versions of the tracking pipeline:
-
-- **DeepSORT (main branch)** → High stability, ideal for dense crowds  
-- **IoU Tracker (iou-version branch)** → Lightweight and fast for simple scenes  
-
+Pipeline: Detection → Tracking → Line Crossing → Counting → Visualization
 ---
 
 ## ⭐ Features
@@ -20,7 +16,7 @@ This project provides two versions of the tracking pipeline:
 - Basic HTML templates (`index.html` and `report.html`) included  
 - Easy to extend for entry/exit counting  
 
-> **Note:** Line-crossing (entry count) is **only implemented yet**.
+> **Note:** Only entry counting (line-crossing) is currently implemented.
 
 ---
 
@@ -45,7 +41,7 @@ Suitable for:
 - Faster execution  
 - Simpler systems  
 
-Uses only:
+Uses:
 - Bounding-box IoU overlap  
 - No appearance features  
 - Extremely fast but less stable in crowded scenes  
@@ -119,6 +115,8 @@ Ensure the path is correctly set inside `iou.py`.
 ```bash
 python iou.py
 ```
+
+> **Note:** Place video files in the project directory or RTSP camera streams can be used instead of video files
 
 ---
 

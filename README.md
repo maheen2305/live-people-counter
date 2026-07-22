@@ -1,4 +1,5 @@
 # Live People Counter – Real-Time Head Detection & Tracking
+Co-developed with Ishika — forked from https://github.com/Ishika1435/live-people-counter
 
 A real-time **head-based people counting system** using **YOLOv5** for detection and **DeepSORT / IoU tracking** for stable identity tracking.  
 Designed for CCTV and live monitoring to measure **how many people are present** in a scene and supports entry-counting based on line crossing.
